@@ -10,6 +10,7 @@ public class Laptop {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String password;
     private String brand;
     private String model;
     private String processor;
@@ -19,8 +20,9 @@ public class Laptop {
     public Laptop() {
     }
 
-    public Laptop(Long id, String brand, String model, String processor, Integer ram, Integer storage) {
+    public Laptop(Long id, String password, String brand, String model, String processor, Integer ram, Integer storage) {
         this.id = id;
+        this.password = password;
         this.brand = brand;
         this.model = model;
         this.processor = processor;
